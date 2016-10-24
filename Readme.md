@@ -1,6 +1,6 @@
 # Speed Challenge Documentation
 
-![Derivative Image from real_time.py](derivate_img.jpg)
+![Derivative Image from real_time.py](https://github.com/wileyjones/speed_challenge/blob/master/derivative_img.jpg)
 
 # Approach
 Given my skill set, the most reasonable approach was via traditional signal processing techniques.
