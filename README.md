@@ -1,12 +1,9 @@
-# Speed Challenge Documentation
+# Find speed of a moving vehicle from forward-facing video
 
 ![Derivative Image from real_time.py](https://github.com/wileyjones/speed_challenge/blob/master/derivative_img.jpg)
 
 # Approach
-Given my skill set, the most reasonable approach was via traditional signal processing techniques.
-It might have been more suitable to apply advanced ML/DL techniques like SVMs or CNNs to solve
-this problem more suitably. However, having significantly less knowledge in those fields, I sought
-to look at the essence of what was being asked - *find a rate of change*.
+Using basic signal processing and computer vision, find an image derivative and map it to a vehicle speed.
 
 There are two files included, `real_time.py` and `model.py`. Real-time is accurately named as it is runs a frame-by-frame. It can even show the derivate images (check line 165 in the code to play with this). The other is `model.py` which processes the data as fast as possible ~5x speed of `real_time.py`. This file could be extended to include additional ML/statistics post-processing and model generation.
 
@@ -18,7 +15,7 @@ There are two files included, `real_time.py` and `model.py`. Real-time is accura
   * To normalize data, sqrt(image^2) magnitude is taken
   * Next to get the matrix to score-like scalar, the sum of rows and columns is taken
 3. Pass these image energy deltas as (I like to refer to them) through filters
-  * I noticed that the spiky responses were around areas of velocity, but needed flattening
+  * I noticed that the spike1y responses were around areas of velocity, but needed flattening
   * The Savitzky-Golay is particularly ideal for this application, as a smoothing filter that has great high-frequency rejection without damaging general signal shape
 4. Plot data and manually tweak number of filter passes, windowing, polynomial fit
   * Optimized for generality as opposed to RMSE, avoiding overfitting
