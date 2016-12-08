@@ -19,15 +19,18 @@ There are two files included, `real_time.py` and `model.py`. Real-time is accura
   * The Savitzky-Golay is particularly ideal for this application, as a smoothing filter that has great high-frequency rejection without damaging general signal shape
 4. Plot data and manually tweak number of filter passes, windowing, polynomial fit
   * Optimized for generality as opposed to RMSE, avoiding overfitting
+  
+![Actual speed from each frame](https://github.com/wileyjones/speed_challenge/blob/master/results_actual.png)
+![Predicted speed from each frame](https://github.com/wileyjones/speed_challenge/blob/master/results_predicted.png)
 
 # Comments
-The general shape achieved by this approach is quite compelling for a few main reasons:
+Poor RMSE was acheived but the results are still quite compelling for a few main reasons:
 
-1. General shape is shown by simple (low cost) matrix computations and filtering
+1. General shape of predicted speeds are similar to that of actual speeds, found by simple (low cost) matrix computations and filtering
 2. Accuracy and generality could be extended with ML techniques and more data
 3. These methods requires no training and can be implemented in real-time as in the `real_time.py` file
 
-It is quite compelling that a scalar value can be computed from images alone and with 0 additional contextual data it provided a general understanding of that velocity profile of a vehicle was changing. This approach could be furthered with machine learning techniques that could make sense of the complex mapping between our image energy delta scalars and the speed, also a scalar. Providing additional contextual data could serve as a way of improving the generality of this approach.
+This approach could be furthered with machine learning techniques that could make sense of the complex mapping between our image energy delta scalars and the speed, also a scalar. Providing additional contextual data could serve as a way of improving the generality of this approach.
 
 # Further Testing and Validation
 To test the models and files, simple link the correct JSON file and video .mp4 into the file and it will run!
