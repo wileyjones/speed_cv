@@ -21,10 +21,10 @@ There are two files included, `real_time.py` and `model.py`. Real-time is accura
   * Optimized for generality as opposed to RMSE, avoiding overfitting
 
 # Results
-Actual Speeds
+Actual Speeds:
 ![Actual speed from each frame](https://github.com/wileyjones/speed_challenge/blob/master/results_actual.png)
 
-Predicted Speeds
+Predicted Speeds:
 ![Predicted speed from each frame](https://github.com/wileyjones/speed_challenge/blob/master/results_predicted.png)
 
 # Comments
