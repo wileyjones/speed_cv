@@ -19,8 +19,12 @@ There are two files included, `real_time.py` and `model.py`. Real-time is accura
   * The Savitzky-Golay is particularly ideal for this application, as a smoothing filter that has great high-frequency rejection without damaging general signal shape
 4. Plot data and manually tweak number of filter passes, windowing, polynomial fit
   * Optimized for generality as opposed to RMSE, avoiding overfitting
-  
+
+# Results
+Actual Speeds
 ![Actual speed from each frame](https://github.com/wileyjones/speed_challenge/blob/master/results_actual.png)
+
+Predicted Speeds
 ![Predicted speed from each frame](https://github.com/wileyjones/speed_challenge/blob/master/results_predicted.png)
 
 # Comments
